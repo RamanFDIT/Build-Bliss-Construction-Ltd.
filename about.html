@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Build Bliss Construction</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-black text-white font-[Cabin]">
+  <header>
+    <nav class="flex items-center justify-between px-[2.5rem] py-[0.5rem] lg:px-[2.5rem] md:px-8 px-6">
+      <div class="logo flex-shrink-0">
+        <a href="index.html" aria-label="Go to Home">
+          <svg xmlns="http://www.w3.org/2000/svg" width="150" height="54" viewBox="0 0 150 54" fill="none">
+            <path d="M149.5 53.5L75 40.5L0 53.5L75 34.5L149.5 53.5ZM57 32.5H54.5V29.5H57V32.5ZM60.5 32.5H58V29.5H60.5V32.5ZM73 32.5H70.5V29.5H73V32.5ZM76.5 32.5H74V29.5H76.5V32.5ZM80 32.5H77.5V29.5H80V32.5ZM93 32.5H90.5V29.5H93V32.5ZM96.5 32.5H94V29.5H96.5V32.5ZM57 28.5H54.5V25.5H57V28.5ZM60.5 28.5H58V25.5H60.5V28.5ZM73 28.5H70.5V25.5H73V28.5ZM76.5 28.5H74V25.5H76.5V28.5ZM80 28.5H77.5V25.5H80V28.5ZM93 28.5H90.5V25.5H93V28.5ZM96.5 28.5H94V25.5H96.5V28.5ZM98 11.2031V7.5H102.5V13.3438L127 25L75.5 8L24.5 25L75.5 0.5L98 11.2031ZM57 24.5H54.5V21.5H57V24.5ZM60.5 24.5H58V21.5H60.5V24.5ZM73 24.5H70.5V21.5H73V24.5ZM76.5 24.5H74V21.5H76.5V24.5ZM80 24.5H77.5V21.5H80V24.5ZM93 24.5H90.5V21.5H93V24.5ZM96.5 24.5H94V21.5H96.5V24.5ZM74.3887 20.5H70.5C70.5 18.8333 71.0559 17.7224 72.167 16.6113L74.3887 20.5ZM74.9443 20.5L73.833 18.2773L72.7227 16.0557C73.0931 15.6854 74.0556 15.5 74.9443 15.5V20.5ZM75.5 15.5C76.3889 15.5 77.3523 15.6853 77.7227 16.0557L76.6113 18.2773L75.5 20.5V15.5ZM78.2773 16.6113C79.3885 17.7224 79.9443 18.8333 79.9443 20.5H76.0557L78.2773 16.6113Z" fill="url(#paint0_linear_logo)"/>
+            <defs>
+              <linearGradient id="paint0_linear_logo" x1="74.75" y1="34.5" x2="74.75" y2="53.5" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#AA800F"/>
+                <stop offset="1" stop-color="#EED259"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </a>
+      </div>
+      <button id="menuToggle" aria-expanded="false" aria-controls="mobileNav" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-[#EED259]/40 text-[#EED259] focus:outline-none focus:ring-2 focus:ring-[#EED259] focus:ring-offset-2 focus:ring-offset-black transition">
+        <span class="sr-only">Open main menu</span>
+        <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" /></svg>
+        <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 hidden"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+      <div class="hidden lg:block">
+        <ul class="flex justify-between items-center gap-[4rem]">
+          <li><a href="index.html">Home</a></li>
+          <li class="font-bold text-[#EED259]"><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+      <div class="hidden lg:block">
+        <a href="index.html#contact" class="bg-gradient-to-r from-[#AA800F] to-[#EED259] text-black font-bold py-2 px-4 rounded block focus:outline-none focus:ring-2 focus:ring-[#EED259] focus:ring-offset-2 focus:ring-offset-black">CONTACT</a>
+      </div>
+    </nav>
+    <!-- Mobile Nav -->
+    <div id="mobileNavWrapper" class="lg:hidden">
+      <div id="mobileOverlay" class="fixed inset-0 bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+      <div id="mobileNav" class="fixed top-0 right-0 h-full w-72 max-w-[80%] bg-black border-l border-[#EED259]/30 translate-x-full transition-transform duration-300 ease-out flex flex-col gap-8 p-8 shadow-xl">
+        <div class="flex items-center justify-between">
+          <span class="text-[#EED259] font-bold text-xl">Menu</span>
+          <button id="closePanel" type="button" class="inline-flex items-center justify-center w-9 h-9 rounded-md border border-[#EED259]/40 text-[#EED259] focus:outline-none focus:ring-2 focus:ring-[#EED259] focus:ring-offset-2 focus:ring-offset-black transition" aria-label="Close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+          </button>
+        </div>
+        <ul class="flex flex-col gap-6 text-lg">
+          <li><a class="block" href="index.html">Home</a></li>
+          <li class="font-bold text-[#EED259]"><a class="block" href="about.html" aria-current="page">About</a></li>
+          <li><a class="block" href="projects.html">Projects</a></li>
+        </ul>
+        <div>
+          <a href="index.html#contact" class="w-full text-center bg-gradient-to-r from-[#AA800F] to-[#EED259] text-black font-bold py-3 px-4 rounded block focus:outline-none focus:ring-2 focus:ring-[#EED259] focus:ring-offset-2 focus:ring-offset-black">CONTACT</a>
+        </div>
+        <div class="mt-auto text-xs text-[#EED259]/60 tracking-wide">© 2025 Build Bliss Construction</div>
+      </div>
+    </div>
+  </header>
+  <main class="flex flex-col gap-24 px-6 md:px-12 lg:px-[5rem] py-[2rem]">
+    <!-- Hero / Intro -->
+    <section class="flex flex-col gap-8 items-center text-center mt-4">
+      <h1 class="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#AA800F] to-[#EED259]">About Us</h1>
+      <p class="max-w-3xl text-lg leading-relaxed text-white/80">We frame spaces that become legacies. Our commitment goes beyond lumber and fasteners—we engineer dependable structures, streamline schedules, and protect the trust our clients place in us.</p>
+    </section>
+
+    <!-- Story -->
+    <section class="flex flex-col gap-10">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#EED259] text-center">Our Story</h2>
+      <div class="flex flex-col lg:flex-row gap-12 items-start lg:items-stretch">
+        <div class="flex-1 flex flex-col gap-6">
+          <p class="text-white/80 leading-relaxed">Founded by field-tested supervisors who saw the gap between <span class="text-[#EED259] font-semibold">speed</span> and <span class="text-[#EED259] font-semibold">craftsmanship</span>, Build Bliss Construction was created to prove you can have both. What started as a small, disciplined framing crew has grown into a collaborative unit supporting multi-family, custom residential, and commercial projects across the Lower Mainland and Interior.</p>
+          <p class="text-white/80 leading-relaxed">Every project we touch is guided by a simple principle: <em>deliver structural excellence with zero drama.</em> That means proactive communication, precise layout, clean sites, and crews that show up prepared—every single day.</p>
+          <p class="text-white/80 leading-relaxed">We invest heavily in training, tooling, and workflow optimization. Laser layout, safety-first sequencing, and transparent reporting help GCs and owners keep confidence high while schedules stay protected.</p>
+        </div>
+        <div class="flex-1 flex flex-col gap-8 bg-black/50 rounded-lg p-8 border border-[#EED259]/30">
+          <h3 class="text-2xl font-bold text-[#EED259]">Quick Facts</h3>
+          <ul class="space-y-4 text-white/80">
+            <li><span class="text-[#EED259] font-semibold">10+</span> dedicated framing professionals</li>
+            <li><span class="text-[#EED259] font-semibold">2017–Present</span> active leadership experience</li>
+            <li><span class="text-[#EED259] font-semibold">Multi-family</span>, commercial & custom residential</li>
+            <li>Focused on <span class="text-[#EED259] font-semibold">structural accuracy & schedule integrity</span></li>
+            <li>Trusted by GCs for <span class="text-[#EED259] font-semibold">clean turnover</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="flex flex-col gap-10">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#EED259] text-center">Core Values</h2>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-4">
+          <h3 class="text-xl font-semibold text-[#EED259]">Precision First</h3>
+          <p class="text-white/70 text-sm">Accurate layout and fastening today prevents cost escalations tomorrow. We slow down early so the whole project can accelerate later.</p>
+        </div>
+        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-4">
+          <h3 class="text-xl font-semibold text-[#EED259]">Reliable Cadence</h3>
+          <p class="text-white/70 text-sm">Consistent progress beats sporadic bursts. Our crews maintain disciplined daily output so other trades can plan confidently.</p>
+        </div>
+        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-4">
+          <h3 class="text-xl font-semibold text-[#EED259]">Transparent Communication</h3>
+          <p class="text-white/70 text-sm">We surface risks early, document decisions, and keep GCs informed—never guessing what’s happening on site.</p>
+        </div>
+        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-4">
+          <h3 class="text-xl font-semibold text-[#EED259]">Safety As Habit</h3>
+          <p class="text-white/70 text-sm">Safe sites are efficient sites. Gear compliance, housekeeping, and hazard anticipation are baked into our rhythm.</p>
+        </div>
+        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-4">
+          <h3 class="text-xl font-semibold text-[#EED259]">Craft With Pride</h3>
+          <p class="text-white/70 text-sm">We build as if the structure will carry our name forever—because reputation compounds over time.</p>
+        </div>
+        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-4">
+          <h3 class="text-xl font-semibold text-[#EED259]">Partnership Mindset</h3>
+          <p class="text-white/70 text-sm">We’re not just a labour input—we’re a structural partner helping the entire build succeed.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="flex flex-col gap-10">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#EED259] text-center">How We Work</h2>
+      <div class="grid gap-10 md:grid-cols-3">
+        <div class="flex flex-col gap-4">
+          <span class="text-[#EED259] font-bold tracking-wide">01 / PREP & MOBILIZE</span>
+          <p class="text-white/70 text-sm leading-relaxed">Scope review, sequencing strategy, material readiness checks, safety & logistic alignment. We arrive ready—not reactive.</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <span class="text-[#EED259] font-bold tracking-wide">02 / STRUCTURAL EXECUTION</span>
+          <p class="text-white/70 text-sm leading-relaxed">Laser layout, framing progression, engineered connections, daily cleanup, photo & milestone documentation.</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <span class="text-[#EED259] font-bold tracking-wide">03 / TURNOVER & SUPPORT</span>
+          <p class="text-white/70 text-sm leading-relaxed">Punch review, corrective adjustments, handoff notes, and responsive follow-up for downstream trades.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Removed CTA section 'Ready To Build With Confidence?' as requested -->
+  </main>
+  <footer class="mt-10 border-t border-[#EED259]/20">
+    <div class="px-6 md:px-12 lg:px-[5rem] py-14 flex flex-col gap-10">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#EED259] text-center">Get In Touch</h2>
+      <div class="flex flex-col xl:flex-row gap-16 justify-between items-start">
+        <div class="flex-1 flex flex-col gap-5 max-w-md">
+          <h3 class="text-2xl font-semibold text-[#EED259]">Let’s Frame It Right</h3>
+          <p class="text-white/70 text-sm leading-relaxed">Whether you’re coordinating a multi-family site, scoping a commercial build, or planning a custom residence—we can integrate early, help sequence structural milestones, and deliver a clean, dependable frame. Reach out and we’ll respond promptly.</p>
+          <ul class="space-y-3 text-white/75 text-sm">
+            <li><span class="text-[#EED259] font-semibold">Office:</span> 7244 140ST Surrey, BC (V3W5J7)</li>
+            <li><span class="text-[#EED259] font-semibold">Email:</span> buildblissconstruction@gmail.com</li>
+            <li><span class="text-[#EED259] font-semibold">Availability:</span> Mon–Sat / 7:00am – 5:30pm</li>
+          </ul>
+        </div>
+        <form id="aboutContactForm" class="flex flex-col gap-4 w-full max-w-md">
+          <label for="a_name" class="text-white mb-1">Name</label>
+          <input id="a_name" name="name" type="text" required class="p-2 bg-white rounded-md text-black" />
+          <label for="a_email" class="text-white mb-1">Email</label>
+            <input id="a_email" name="email" type="email" required class="p-2 bg-white rounded-md text-black" />
+          <label for="a_message" class="text-white mb-1">Message</label>
+          <textarea id="a_message" name="message" required class="p-2 bg-white rounded-md text-black" rows="5"></textarea>
+          <input type="submit" value="Send Now" class="bg-gradient-to-r from-[#AA800F] to-[#EED259] text-black font-bold px-4 py-2 rounded-md mt-2 hover:from-[#EED259] hover:to-[#AA800F] transition-colors duration-300" />
+        </form>
+      </div>
+      <div class="pt-8 text-center text-xs text-[#EED259]/50 tracking-wide">© 2025 Build Bliss Construction • Structural Framing Specialists</div>
+    </div>
+  </footer>
+  <script>
+    // Lightweight mailto handler for about page form (kept separate to avoid coupling)
+    (function(){
+      const form = document.getElementById('aboutContactForm');
+      if(!form) return;
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const name = (form.querySelector('#a_name')?.value || '').trim();
+        const email = (form.querySelector('#a_email')?.value || '').trim();
+        const message = (form.querySelector('#a_message')?.value || '').trim();
+        const recipient = 'buildblissconstruction@gmail.com';
+        const subject = encodeURIComponent(`About Page Inquiry from ${name || 'Visitor'}`);
+        const body = encodeURIComponent([`Name: ${name}`, `Email: ${email}`, '', 'Message:', message].join('\n'));
+        window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+        form.reset();
+      });
+    })();
+  </script>
+</body>
+</html>

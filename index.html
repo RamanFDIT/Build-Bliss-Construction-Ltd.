@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cabin:ital,wght@0,400..700;1,400..700&family=Ephesis&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Pinyon+Script&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ranchers&family=Roboto+Slab:wght@100..900&family=Ultra&family=Unbounded:wght@200..900&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Build Bliss Construction</title>
+</head>
+<body class="bg-black text-white font-[Cabin]">
+    <header>
+        <nav class="flex items-center justify-between px-[2.5rem] py-[0.5rem] lg:px-[2.5rem] md:px-8 px-6">
+            <div class="logo flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="150" height="54" viewBox="0 0 150 54" fill="none">
+  <path d="M149.5 53.5L75 40.5L0 53.5L75 34.5L149.5 53.5ZM57 32.5H54.5V29.5H57V32.5ZM60.5 32.5H58V29.5H60.5V32.5ZM73 32.5H70.5V29.5H73V32.5ZM76.5 32.5H74V29.5H76.5V32.5ZM80 32.5H77.5V29.5H80V32.5ZM93 32.5H90.5V29.5H93V32.5ZM96.5 32.5H94V29.5H96.5V32.5ZM57 28.5H54.5V25.5H57V28.5ZM60.5 28.5H58V25.5H60.5V28.5ZM73 28.5H70.5V25.5H73V28.5ZM76.5 28.5H74V25.5H76.5V28.5ZM80 28.5H77.5V25.5H80V28.5ZM93 28.5H90.5V25.5H93V28.5ZM96.5 28.5H94V25.5H96.5V28.5ZM98 11.2031V7.5H102.5V13.3438L127 25L75.5 8L24.5 25L75.5 0.5L98 11.2031ZM57 24.5H54.5V21.5H57V24.5ZM60.5 24.5H58V21.5H60.5V24.5ZM73 24.5H70.5V21.5H73V24.5ZM76.5 24.5H74V21.5H76.5V24.5ZM80 24.5H77.5V21.5H80V24.5ZM93 24.5H90.5V21.5H93V24.5ZM96.5 24.5H94V21.5H96.5V24.5ZM74.3887 20.5H70.5C70.5 18.8333 71.0559 17.7224 72.167 16.6113L74.3887 20.5ZM74.9443 20.5L73.833 18.2773L72.7227 16.0557C73.0931 15.6854 74.0556 15.5 74.9443 15.5V20.5ZM75.5 15.5C76.3889 15.5 77.3523 15.6853 77.7227 16.0557L76.6113 18.2773L75.5 20.5V15.5ZM78.2773 16.6113C79.3885 17.7224 79.9443 18.8333 79.9443 20.5H76.0557L78.2773 16.6113Z" fill="url(#paint0_linear_40_301)"/>
+  <defs>
+    <linearGradient id="paint0_linear_40_301" x1="74.75" y1="34.5" x2="74.75" y2="53.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#AA800F"/>
+      <stop offset="1" stop-color="#EED259"/>
+    </linearGradient>
+  </defs>
+                </svg>
+            </div>
+            <!-- Hamburger button (mobile) -->
+            <button id="menuToggle" aria-expanded="false" aria-controls="mobileNav" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-[#EED259]/40 text-[#EED259] focus:outline-none focus:ring-2 focus:ring-[#EED259] focus:ring-offset-2 focus:ring-offset-black transition" type="button">
+                <span class="sr-only">Open main menu</span>
+                <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+                </svg>
+                <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 hidden">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <!-- Desktop nav -->
+            <div class="hidden lg:block">
+        <ul class="flex justify-between items-center gap-[4rem]">
+          <li class="font-bold text-[#EED259]"><a href="#">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+            </div>
+      <div class="hidden lg:block">
+        <a href="#contact" class="bg-gradient-to-r from-[#AA800F] to-[#EED259] text-black font-bold py-2 px-4 rounded block focus:outline-none focus:ring-2 focus:ring-[#EED259] focus:ring-offset-2 focus:ring-offset-black">CONTACT</a>
+      </div>
+        </nav>
+        <!-- Mobile off-canvas navigation -->
+        <div id="mobileNavWrapper" class="lg:hidden">
+            <div id="mobileOverlay" class="fixed inset-0 bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+            <div id="mobileNav" class="fixed top-0 right-0 h-full w-72 max-w-[80%] bg-black border-l border-[#EED259]/30 translate-x-full transition-transform duration-300 ease-out flex flex-col gap-8 p-8 shadow-xl">
+                <div class="flex items-center justify-between">
+                    <span class="text-[#EED259] font-bold text-xl">Menu</span>
+                    <button id="closePanel" class="inline-flex items-center justify-center w-9 h-9 rounded-md border border-[#EED259]/40 text-[#EED259] focus:outline-none focus:ring-2 focus:ring-[#EED259] focus:ring-offset-2 focus:ring-offset-black transition" type="button" aria-label="Close menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+        <ul class="flex flex-col gap-6 text-lg">
+          <li class="font-bold text-[#EED259]"><a class="block" href="#">Home</a></li>
+          <li><a class="block" href="about.html">About</a></li>
+          <li><a class="block" href="projects.html">Projects</a></li>
+        </ul>
+        <div>
+          <a href="#contact" class="w-full text-center bg-gradient-to-r from-[#AA800F] to-[#EED259] text-black font-bold py-3 px-4 rounded block focus:outline-none focus:ring-2 focus:ring-[#EED259] focus:ring-offset-2 focus:ring-offset-black">CONTACT</a>
+        </div>
+                <div class="mt-auto text-xs text-[#EED259]/60 tracking-wide">© 2025 Build Bliss Construction</div>
+            </div>
+        </div>
+    </header>
+  <main class="flex flex-col gap-20 px-6 md:px-12 lg:px-[5rem] py-[2rem]">
+  <section class="flex justify-center items-center h-[50vh] md:h-[90vh] background-hero">
+      <div class="text-center px-2">
+                <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[#AA800F] to-[#EED259]">Build Bliss Construction</h1>
+            </div>    
+        </section>
+        <section class="flex flex-col gap-10">
+            <h2 class="text-4xl text-[#EED259] font-bold text-center">About Us</h2>
+      <div class="flex flex-col lg:flex-row justify-evenly items-center gap-10 lg:gap-16">
+        <img src="Images/bbcteam.png" alt="Team Photo" class="w-full max-w-md lg:max-w-lg h-auto object-contain">
+        <div class="flex flex-col items-center gap-6 max-w-3xl px-2">
+                    <div class="flex flex-col gap-4 max-w-3xl">
+                        <p class="text-lg italic">Building with Precision, Backed by Experience</p>
+                        <p class="text-md">Based in Surrey, our crew is the backbone of our success. With over 10 years of combined hands-on experience in wood framing, our skilled team of 10 dedicated carpenters brings precision, professionalism, and pride to every project.
+                        Led by experienced supervisors who have been active in the construction industry since 2017, our crew is trained to handle framing projects of any scale — from custom homes to large commercial builds. Every member of our team is committed to upholding the highest safety standards while delivering top-tier workmanship.</p>
+                    </div>
+                    <div>
+                        <a href="about.html"><button class="bg-gradient-to-r from-[#AA800F] to-[#EED259] text-black font-bold py-2 px-4 rounded">Know More</button></a>
+                    </div>
+                </div>
+            </div>
+         </section>
+         <section class="flex flex-col gap-10">
+            <h2 class="text-4xl text-[#EED259] font-bold text-center">Projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 w-full">
+              <!-- Project 1 -->
+              <div class="relative project-card h-[14rem] sm:h-[16rem] lg:h-[35.375rem] rounded-lg overflow-hidden transition-shadow duration-300 hover:shadow-lg hover:shadow-[#EED259]/30">
+                <img src="Images/project1.png" alt="Project Image" loading="lazy" decoding="async" class="project-img w-full h-full object-cover rounded-lg shadow-lg">
+                <div class="absolute inset-0 flex flex-col gap-1 lg:gap-4 justify-center items-center bg-black/60 rounded-lg description px-3">
+                  <h3 class="text-sm sm:text-base lg:text-3xl font-semibold text-[#EED259] text-center leading-snug">COMMERCIAL RENTAL BUILDING (NWI CONTRACTING)</h3>
+                  <p class="text-[10px] sm:text-xs lg:text-lg tracking-wide text-white/80">Kelowna, BC</p>
+                </div>
+              </div>
+              <!-- Project 2 -->
+              <div class="relative project-card h-[14rem] sm:h-[16rem] lg:h-[35.375rem] rounded-lg overflow-hidden transition-shadow duration-300 hover:shadow-lg hover:shadow-[#EED259]/30">
+                <img src="Images/project2.png" alt="Project Image" loading="lazy" decoding="async" class="project-img w-full h-full object-cover rounded-lg shadow-lg">
+                <div class="absolute inset-0 flex flex-col gap-1 lg:gap-4 justify-center items-center bg-black/60 rounded-lg description px-3">
+                  <h3 class="text-sm sm:text-base lg:text-3xl font-semibold text-[#EED259] text-center leading-snug">MULTI-FAMILY PROJECT (ANTHEM)</h3>
+                  <p class="text-[10px] sm:text-xs lg:text-lg tracking-wide text-white/80">North Vancouver, BC</p>
+                </div>
+              </div>
+              <!-- Project 3 -->
+              <div class="project-card flex flex-col justify-center items-center h-[14rem] sm:h-[16rem] lg:h-[35.375rem] rounded-lg bg-black bg-opacity-50 border-2 border-[#EED259] px-3 overflow-hidden transition-shadow duration-300 hover:shadow-lg hover:shadow-[#EED259]/30">
+                <h3 class="text-sm sm:text-base lg:text-3xl font-semibold text-[#EED259] text-center leading-snug">COMING SOON..</h3>
+                <p class="text-xs sm:text-sm lg:text-xl">Sicamous, BC</p>
+              </div>
+            </div>
+            <div class="flex justify-center mt-4">
+              <a href="projects.html" class="bg-gradient-to-r from-[#AA800F] to-[#EED259] text-black font-bold py-2 px-6 rounded shadow hover:from-[#EED259] hover:to-[#AA800F] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#EED259] focus:ring-offset-2 focus:ring-offset-black">View All Projects</a>
+            </div>
+         </section>
+      <section class="flex w-full flex-col gap-10">
+        <h2 class="text-4xl text-[#EED259] font-bold text-center">Services</h2>
+        <!-- Refactored layout: use responsive grid for consistent mobile spacing -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 place-items-center">
+        <div class="relative service-card">
+          <div class="w-[18rem] sm:w-[19rem] md:w-[20rem] h-[16rem] p-5 flex flex-col gap-4 items-center justify-center inset-0 bg-black bg-opacity-50 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+                  <path d="M91.6667 37.5001L50 4.16675L8.33333 37.5001V45.8334H16.6667V87.5001H37.5V70.8334C37.5 67.5182 38.817 64.3388 41.1612 61.9946C43.5054 59.6504 46.6848 58.3334 50 58.3334C53.3152 58.3334 56.4946 59.6504 58.8388 61.9946C61.183 64.3388 62.5 67.5182 62.5 70.8334V87.5001H83.3333V45.8334H91.6667V37.5001Z" fill="url(#paint0_linear_57_48)"/>
+                  <defs>
+                    <linearGradient id="paint0_linear_57_48" x1="50" y1="4.16675" x2="50" y2="87.5001" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#EFD75C"/>
+                      <stop offset="1" stop-color="#C59D2A"/>
+                    </linearGradient>
+                  </defs>
+                    </svg>
+                    <h3 class="text-2xl font-bold text-[#EED259] text-center">MULTI-FAMILY PROJECT</h3>
+                    </div>
+                    <div class="lists absolute w-full h-full p-5 flex flex-col gap-4 items-center justify-center inset-0 bg-black bg-opacity-50 rounded-lg">
+                        <ul class="flex flex-col gap-4 text-xl text-center">
+                            <li>Apartments</li>
+                            <li>Condos</li>
+                            <li>Hotels</li>
+                        </ul>
+                    </div> 
+                </div>
+        <div class="relative service-card">
+          <div class="w-[18rem] sm:w-[19rem] md:w-[20rem] h-[16rem] p-5 flex flex-col gap-4 items-center justify-center inset-0 bg-black bg-opacity-50 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76" fill="none">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M57.8958 0.608385C58.932 0.367877 60.021 0.532826 60.9395 1.06942C61.8581 1.60602 62.5366 2.47363 62.836 3.49441C63.1354 4.51519 63.0331 5.61184 62.5499 6.55959C62.0668 7.50733 61.2394 8.23438 60.2374 8.59172L59.7708 8.72505L50.4999 10.8667V29.6667H67.1666C69.269 29.6661 71.294 30.4601 72.8356 31.8896C74.3771 33.3192 75.3214 35.2786 75.4791 37.3751L75.4999 38.0001V67.1667C75.5006 69.2691 74.7066 71.2941 73.277 72.8357C71.8475 74.3773 69.8881 75.3215 67.7916 75.4792L67.1666 75.5001H12.9999C10.8975 75.5007 8.87258 74.7067 7.33099 73.2772C5.7894 71.8476 4.84512 69.8882 4.68744 67.7917L4.66661 67.1667V21.3334C3.68408 21.3348 2.73267 20.9889 1.98043 20.3568C1.22818 19.7247 0.723494 18.8472 0.555503 17.8791C0.387513 16.9111 0.567026 15.9148 1.06234 15.0662C1.55765 14.2177 2.33689 13.5715 3.26244 13.2417L3.72911 13.1084L57.8958 0.608385ZM50.4999 46.3334H46.3333C45.3127 46.3335 44.3277 46.7082 43.5651 47.3864C42.8024 48.0645 42.3152 48.999 42.1958 50.0126L42.1666 50.5001V67.1667H54.6666V50.5001C54.6665 49.4795 54.2918 48.4945 53.6136 47.7318C52.9355 46.9692 52.001 46.482 50.9874 46.3626L50.4999 46.3334ZM21.3333 17.5959L12.9999 19.5209V67.1667H21.3333V17.5959ZM42.1666 12.7876L29.6666 15.6751V29.6667H42.1666V12.7876Z" fill="url(#paint0_linear_19_151)"/>
+  <defs>
+    <linearGradient id="paint0_linear_19_151" x1="37.997" y1="0.500488" x2="37.997" y2="75.5001" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F9EC67"/>
+      <stop offset="1" stop-color="#A28631"/>
+    </linearGradient>
+  </defs>
+                    </svg>
+                    <h3 class="text-2xl font-bold text-[#EED259] text-center">CUSTOM HOMES</h3>
+                    </div>
+                    <div class="lists absolute w-full h-full p-5 flex flex-col gap-4 items-center justify-center inset-0 bg-black bg-opacity-50 rounded-lg">
+                        <ul class="flex flex-col gap-4 text-xl text-center">
+                            <li>Duplexes</li>
+                            <li>Detached Homes</li>
+                            <li>Townhouses</li>
+                        </ul>
+                    </div> 
+                </div>
+        <div class="relative service-card">
+          <div class="w-[18rem] sm:w-[19rem] md:w-[20rem] h-[16rem] p-5 flex flex-col gap-4 items-center justify-center inset-0 bg-black bg-opacity-50 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M33.3334 20.8334C33.3334 17.5182 34.6503 14.3387 36.9945 11.9945C39.3387 9.65034 42.5182 8.33337 45.8334 8.33337H79.1667C82.4819 8.33337 85.6613 9.65034 88.0055 11.9945C90.3497 14.3387 91.6667 17.5182 91.6667 20.8334V79.1667C91.6667 82.4819 90.3497 85.6613 88.0055 88.0055C85.6613 90.3498 82.4819 91.6667 79.1667 91.6667H45.8334C42.5182 91.6667 39.3387 90.3498 36.9945 88.0055C34.6503 85.6613 33.3334 82.4819 33.3334 79.1667V20.8334ZM45.8334 16.6667C44.7283 16.6667 43.6685 17.1057 42.8871 17.8871C42.1057 18.6685 41.6667 19.7283 41.6667 20.8334V79.1667C41.6667 80.2718 42.1057 81.3316 42.8871 82.113C43.6685 82.8944 44.7283 83.3334 45.8334 83.3334H79.1667C80.2718 83.3334 81.3316 82.8944 82.113 82.113C82.8944 81.3316 83.3334 80.2718 83.3334 79.1667V20.8334C83.3334 19.7283 82.8944 18.6685 82.113 17.8871C81.3316 17.1057 80.2718 16.6667 79.1667 16.6667H45.8334Z" fill="url(#paint0_linear_19_204)"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33337 45.8334C8.33337 42.5182 9.65033 39.3387 11.9945 36.9945C14.3387 34.6503 17.5182 33.3334 20.8334 33.3334H39.5834V41.6667H20.8334C19.7283 41.6667 18.6685 42.1057 17.8871 42.8871C17.1057 43.6685 16.6667 44.7283 16.6667 45.8334V79.1667C16.6667 80.2718 17.1057 81.3316 17.8871 82.113C18.6685 82.8944 19.7283 83.3334 20.8334 83.3334H60.4167V91.6667H20.8334C17.5182 91.6667 14.3387 90.3497 11.9945 88.0055C9.65033 85.6613 8.33337 82.4819 8.33337 79.1667V45.8334Z" fill="url(#paint1_linear_19_204)"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M50 70.8333C50 68.6232 50.878 66.5036 52.4408 64.9408C54.0036 63.378 56.1232 62.5 58.3333 62.5H66.6667C68.8768 62.5 70.9964 63.378 72.5592 64.9408C74.122 66.5036 75 68.6232 75 70.8333V83.3333H66.6667V70.8333H58.3333V83.3333H50V70.8333Z" fill="url(#paint2_linear_19_204)"/>
+  <path d="M50 25C50 23.895 50.439 22.8352 51.2204 22.0538C52.0018 21.2724 53.0616 20.8334 54.1667 20.8334C55.2718 20.8334 56.3316 21.2724 57.113 22.0538C57.8944 22.8352 58.3334 23.895 58.3334 25V29.1667C58.3334 30.2718 57.8944 31.3316 57.113 32.113C56.3316 32.8944 55.2718 33.3334 54.1667 33.3334C53.0616 33.3334 52.0018 32.8944 51.2204 32.113C50.439 31.3316 50 30.2718 50 29.1667V25ZM50 45.8334C50 44.7283 50.439 43.6685 51.2204 42.8871C52.0018 42.1057 53.0616 41.6667 54.1667 41.6667C55.2718 41.6667 56.3316 42.1057 57.113 42.8871C57.8944 43.6685 58.3334 44.7283 58.3334 45.8334V50C58.3334 51.1051 57.8944 52.1649 57.113 52.9463C56.3316 53.7277 55.2718 54.1667 54.1667 54.1667C53.0616 54.1667 52.0018 53.7277 51.2204 52.9463C50.439 52.1649 50 51.1051 50 50V45.8334ZM20.8334 62.5C20.8334 61.395 21.2724 60.3352 22.0538 59.5538C22.8352 58.7724 23.895 58.3334 25 58.3334C26.1051 58.3334 27.1649 58.7724 27.9463 59.5538C28.7277 60.3352 29.1667 61.395 29.1667 62.5V66.6667C29.1667 67.7718 28.7277 68.8316 27.9463 69.613C27.1649 70.3944 26.1051 70.8334 25 70.8334C23.895 70.8334 22.8352 70.3944 22.0538 69.613C21.2724 68.8316 20.8334 67.7718 20.8334 66.6667V62.5ZM66.6667 25C66.6667 23.895 67.1057 22.8352 67.8871 22.0538C68.6685 21.2724 69.7283 20.8334 70.8334 20.8334C71.9384 20.8334 72.9983 21.2724 73.7797 22.0538C74.5611 22.8352 75 23.895 75 25V29.1667C75 30.2718 74.5611 31.3316 73.7797 32.113C72.9983 32.8944 71.9384 33.3334 70.8334 33.3334C69.7283 33.3334 68.6685 32.8944 67.8871 32.113C67.1057 31.3316 66.6667 30.2718 66.6667 29.1667V25ZM66.6667 45.8334C66.6667 44.7283 67.1057 43.6685 67.8871 42.8871C68.6685 42.1057 69.7283 41.6667 70.8334 41.6667C71.9384 41.6667 72.9983 42.1057 73.7797 42.8871C74.5611 43.6685 75 44.7283 75 45.8334V50C75 51.1051 74.5611 52.1649 73.7797 52.9463C72.9983 53.7277 71.9384 54.1667 70.8334 54.1667C69.7283 54.1667 68.6685 53.7277 67.8871 52.9463C67.1057 52.1649 66.6667 51.1051 66.6667 50V45.8334Z" fill="url(#paint3_linear_19_204)"/>
+  <defs>
+    <linearGradient id="paint0_linear_19_204" x1="62.5" y1="8.33337" x2="62.5" y2="91.6667" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7E663"/>
+      <stop offset="1" stop-color="#D3AD39"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear_19_204" x1="34.375" y1="33.3334" x2="34.375" y2="91.6667" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7E663"/>
+      <stop offset="1" stop-color="#D3AD39"/>
+    </linearGradient>
+    <linearGradient id="paint2_linear_19_204" x1="62.5" y1="62.5" x2="62.5" y2="83.3333" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7E663"/>
+      <stop offset="1" stop-color="#D3AD39"/>
+    </linearGradient>
+    <linearGradient id="paint3_linear_19_204" x1="47.9167" y1="20.8334" x2="47.9167" y2="70.8334" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7E663"/>
+      <stop offset="1" stop-color="#D3AD39"/>
+    </linearGradient>
+  </defs>
+                    </svg>
+                    <h3 class="text-2xl font-bold text-[#EED259] text-center">COMMERCIAL BUILDINGS</h3>
+                    </div>
+                    <div class="lists absolute w-full h-full p-5 flex flex-col gap-4 items-center justify-center inset-0 bg-black bg-opacity-50 rounded-lg">
+                        <ul class="flex flex-col gap-4 text-xl text-center">
+                            <li>Offices</li>
+                            <li>Retail Spaces</li>
+                            <li>Warehouses</li>
+                        </ul>
+                    </div> 
+                </div>
+        <div class="relative service-card">
+          <div class="w-[18rem] sm:w-[19rem] md:w-[20rem] h-[16rem] p-5 flex flex-col gap-4 items-center justify-center inset-0 bg-black bg-opacity-50 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+  <path d="M29.1666 70.8333V83.3333C29.1666 84.5139 28.7666 85.5042 27.9666 86.3042C27.1666 87.1042 26.1778 87.5028 25 87.5C23.8222 87.4972 22.8333 87.0972 22.0333 86.3C21.2333 85.5028 20.8333 84.5139 20.8333 83.3333V70.8333H16.6666C15.4861 70.8333 14.4972 70.4333 13.7 69.6333C12.9028 68.8333 12.5028 67.8444 12.5 66.6667C12.4972 65.4889 12.8972 64.5 13.7 63.7C14.5028 62.9 15.4916 62.5 16.6666 62.5H20.8333V45.2083L12.5 51.5625C11.5278 52.2569 10.4861 52.5528 9.37497 52.45C8.26386 52.3472 7.36108 51.8083 6.66664 50.8333C5.9722 49.8583 5.69442 48.8167 5.83331 47.7083C5.9722 46.6 6.52775 45.6972 7.49997 45L44.8958 16.3542C45.6597 15.7986 46.4764 15.3819 47.3458 15.1042C48.2152 14.8264 49.1 14.6875 50 14.6875C50.9 14.6875 51.7861 14.8264 52.6583 15.1042C53.5305 15.3819 54.3458 15.7986 55.1041 16.3542L92.5 45C93.4027 45.6944 93.9416 46.5972 94.1166 47.7083C94.2916 48.8194 94.0305 49.8611 93.3333 50.8333C92.6361 51.8055 91.7333 52.3444 90.625 52.45C89.5166 52.5556 88.475 52.2597 87.5 51.5625L79.1666 45.2083V62.5H83.3333C84.5139 62.5 85.5041 62.9 86.3041 63.7C87.1041 64.5 87.5027 65.4889 87.5 66.6667C87.4972 67.8444 87.0972 68.8347 86.3 69.6375C85.5027 70.4403 84.5139 70.8389 83.3333 70.8333H79.1666V83.3333C79.1666 84.5139 78.7666 85.5042 77.9666 86.3042C77.1666 87.1042 76.1777 87.5028 75 87.5C73.8222 87.4972 72.8333 87.0972 72.0333 86.3C71.2333 85.5028 70.8333 84.5139 70.8333 83.3333V70.8333H54.1666V83.3333C54.1666 84.5139 53.7666 85.5042 52.9666 86.3042C52.1666 87.1042 51.1777 87.5028 50 87.5C48.8222 87.4972 47.8333 87.0972 47.0333 86.3C46.2333 85.5028 45.8333 84.5139 45.8333 83.3333V70.8333H29.1666ZM29.1666 62.5H45.8333V26.1458L29.1666 38.8542V62.5ZM54.1666 62.5H70.8333V38.8542L54.1666 26.1458V62.5Z" fill="url(#paint0_linear_22_272)"/>
+  <defs>
+    <linearGradient id="paint0_linear_22_272" x1="49.9839" y1="14.6875" x2="49.9839" y2="87.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5E060"/>
+      <stop offset="1" stop-color="#C8A12F"/>
+    </linearGradient>
+  </defs>
+</svg>
+                    <h3 class="text-2xl font-bold text-[#EED259] text-center">FOUNDATION & RENOVATIONS</h3>
+                    </div>
+                    <div class="lists absolute w-full h-full p-5 flex flex-col gap-4 items-center justify-center inset-0 bg-black bg-opacity-50 rounded-lg">
+                        <ul class="flex flex-col gap-4 text-xl text-center">
+                            <li>Full Basement</li>
+                            <li>Slabs</li>
+                            <li>Piers and Beams</li>
+                        </ul>
+                    </div> 
+                </div>
+        <div class="relative service-card">
+          <div class="w-[18rem] sm:w-[19rem] md:w-[20rem] h-[16rem] p-5 flex flex-col gap-4 items-center justify-center inset-0 bg-black bg-opacity-50 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+  <path d="M54.1667 45.8334C55.2718 45.8334 56.3316 46.2723 57.113 47.0537C57.8944 47.8351 58.3334 48.895 58.3334 50C58.3334 51.1051 57.8944 52.1649 57.113 52.9463C56.3316 53.7277 55.2718 54.1667 54.1667 54.1667C53.0616 54.1667 52.0018 53.7277 51.2204 52.9463C50.439 52.1649 50 51.1051 50 50C50 48.895 50.439 47.8351 51.2204 47.0537C52.0018 46.2723 53.0616 45.8334 54.1667 45.8334ZM32.75 26.0417C35.4802 23.0864 38.7922 20.7279 42.478 19.1145C46.1637 17.5011 50.1433 16.6677 54.1667 16.6667C68.75 16.6667 81 27.5417 83.0417 41.6667H91.6667V50H66.6667C66.6667 46.6848 65.3498 43.5054 63.0055 41.1612C60.6613 38.817 57.4819 37.5 54.1667 37.5C50.8515 37.5 47.6721 38.817 45.3279 41.1612C42.9837 43.5054 41.6667 46.6848 41.6667 50H8.33337V41.6667H8.54171C9.37504 32.2084 13.0834 23.5834 18.75 16.6667L32.75 26.0417ZM28.0417 32.875L21.0834 28.2084C18.875 32.2917 17.4167 36.8334 16.9167 41.6667H25.2917C25.75 38.5417 26.6667 35.5834 28.0417 32.875ZM30.8334 64.1667L25 58.3334H49.125C50.125 60.0834 52.0834 61.25 54.1667 61.25C56.25 61.25 58.2084 60.0834 59.2084 58.3334H83.3334V64.1667C76.625 60.0834 76.9167 65.625 76.9167 65.625V73.7917L68.75 81.9584C66.6667 74.6667 62.9167 78.75 62.9167 78.75L57.0834 84.5834H45.4167C49.5 77.875 43.9584 78.1667 43.9584 78.1667H35.7917L27.625 70C34.9167 67.9583 30.8334 64.1667 30.8334 64.1667Z" fill="url(#paint0_linear_37_202)"/>
+  <defs>
+    <linearGradient id="paint0_linear_37_202" x1="50" y1="16.6667" x2="50" y2="84.5834" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EFD75C"/>
+      <stop offset="1" stop-color="#D8AE5E"/>
+    </linearGradient>
+  </defs>
+</svg>
+                    <h3 class="text-2xl font-bold text-[#EED259] text-center">OTHER FRAMING SERVICES</h3>
+                    </div>
+                    <div class="lists absolute w-full h-full p-5 flex flex-col gap-4 items-center justify-center inset-0 bg-black bg-opacity-50 rounded-lg">
+                        <ul class="flex flex-col gap-4 text-xl text-center">
+                            <li>Site Supervision</li>
+                            <li>Doors Installation</li>
+                            <li>Windows Installation</li>
+                        </ul>
+                    </div> 
+                </div>
+                
+      <div class="hidden"></div>
+            </div>
+         </section>
+    </main>
+  <footer id="contact" class="mt-10 border-t border-[#EED259]/20">
+    <div class="px-6 md:px-12 lg:px-[5rem] py-14 flex flex-col gap-10">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#EED259] text-center">Get In Touch</h2>
+      <div class="flex flex-col xl:flex-row gap-16 justify-between items-start">
+        <div class="flex-1 flex flex-col gap-5 max-w-md">
+          <h3 class="text-2xl font-semibold text-[#EED259]">Let’s Frame It Right</h3>
+          <p class="text-white/70 text-sm leading-relaxed">Whether you’re coordinating a multi-family site, scoping a commercial build, or planning a custom residence—we can integrate early, help sequence structural milestones, and deliver a clean, dependable frame. Reach out and we’ll respond promptly.</p>
+          <ul class="space-y-3 text-white/75 text-sm">
+            <li><span class="text-[#EED259] font-semibold">Office:</span> 7244 140ST Surrey, BC (V3W5J7)</li>
+            <li><span class="text-[#EED259] font-semibold">Email:</span> buildblissconstruction@gmail.com</li>
+            <li><span class="text-[#EED259] font-semibold">Availability:</span> Mon–Sat / 7:00am – 5:30pm</li>
+          </ul>
+          <div class="hidden md:flex flex-col gap-5 pt-4">
+            <!-- Social Icons preserved from original footer -->
+            <div class="flex gap-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 40 40" fill="none">
+                <path d="M13 3.33325H27C32.3334 3.33325 36.6667 7.66659 36.6667 12.9999V26.9999C36.6667 29.5637 35.6483 32.0224 33.8354 33.8353C32.0226 35.6481 29.5638 36.6666 27 36.6666H13C7.66671 36.6666 3.33337 32.3333 3.33337 26.9999V12.9999C3.33337 10.4362 4.35182 7.9774 6.16468 6.16455C7.97753 4.3517 10.4363 3.33325 13 3.33325ZM12.6667 6.66659C11.0754 6.66659 9.54928 7.29873 8.42407 8.42394C7.29885 9.54916 6.66671 11.0753 6.66671 12.6666V27.3333C6.66671 30.6499 9.35004 33.3333 12.6667 33.3333H27.3334C28.9247 33.3333 30.4508 32.7011 31.576 31.5759C32.7012 30.4507 33.3334 28.9245 33.3334 27.3333V12.6666C33.3334 9.34992 30.65 6.66659 27.3334 6.66659H12.6667ZM28.75 9.16658C29.3026 9.16658 29.8325 9.38608 30.2232 9.77678C30.6139 10.1675 30.8334 10.6974 30.8334 11.2499C30.8334 11.8025 30.6139 12.3324 30.2232 12.7231C29.8325 13.1138 29.3026 13.3333 28.75 13.3333C28.1975 13.3333 27.6676 13.1138 27.2769 12.7231C26.8862 12.3324 26.6667 11.8025 26.6667 11.2499C26.6667 10.6974 26.8862 10.1675 27.2769 9.77678C27.6676 9.38608 28.1975 9.16658 28.75 9.16658ZM20 11.6666C22.2102 11.6666 24.3298 12.5446 25.8926 14.1074C27.4554 15.6702 28.3334 17.7898 28.3334 19.9999C28.3334 22.2101 27.4554 24.3297 25.8926 25.8925C24.3298 27.4553 22.2102 28.3333 20 28.3333C17.7899 28.3333 15.6703 27.4553 14.1075 25.8925C12.5447 24.3297 11.6667 22.2101 11.6667 19.9999C11.6667 17.7898 12.5447 15.6702 14.1075 14.1074C15.6703 12.5446 17.7899 11.6666 20 11.6666ZM20 14.9999C18.674 14.9999 17.4022 15.5267 16.4645 16.4644C15.5268 17.4021 15 18.6738 15 19.9999C15 21.326 15.5268 22.5978 16.4645 23.5355C17.4022 24.4731 18.674 24.9999 20 24.9999C21.3261 24.9999 22.5979 24.4731 23.5356 23.5355C24.4733 22.5978 25 21.326 25 19.9999C25 18.6738 24.4733 17.4021 23.5356 16.4644C22.5979 15.5267 21.3261 14.9999 20 14.9999Z" fill="url(#paint0_linear_15_54)"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 40 40" fill="none">
+                <path d="M27.6667 9.7C26.5277 8.39921 25.8998 6.729 25.9 5H20.75V25.6667C20.7111 26.7853 20.2392 27.8451 19.4339 28.6225C18.6285 29.3999 17.5527 29.834 16.4333 29.8333C14.0667 29.8333 12.1 27.9 12.1 25.5C12.1 22.6333 14.8667 20.4833 17.7167 21.3667V16.1C11.9667 15.3333 6.93335 19.8 6.93335 25.5C6.93335 31.05 11.5334 35 16.4167 35C21.65 35 25.9 30.75 25.9 25.5V15.0167C27.9883 16.5164 30.4956 17.3211 33.0667 17.3167V12.1667C33.0667 12.1667 29.9333 12.3167 27.6667 9.7Z" fill="url(#paint0_linear_15_56)"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 40 40" fill="none">
+                <path d="M31.6667 5C32.5507 5 33.3986 5.35119 34.0237 5.97631C34.6488 6.60143 35 7.44928 35 8.33333V31.6667C35 32.5507 34.6488 33.3986 34.0237 34.0237C33.3986 34.6488 32.5507 35 31.6667 35H8.33333C7.44928 35 6.60143 34.6488 5.97631 34.0237C5.35119 33.3986 5 32.5507 5 31.6667V8.33333C5 7.44928 5.35119 6.60143 5.97631 5.97631C6.60143 5.35119 7.44928 5 8.33333 5H31.6667ZM30.8333 30.8333V22C30.8333 20.559 30.2609 19.177 29.2419 18.1581C28.223 17.1391 26.841 16.5667 25.4 16.5667C23.9833 16.5667 22.3333 17.4333 21.5333 18.7333V16.8833H16.8833V30.8333H21.5333V22.6167C21.5333 21.3333 22.5667 20.2833 23.85 20.2833C24.4688 20.2833 25.0623 20.5292 25.4999 20.9668C25.9375 21.4043 26.1833 21.9978 26.1833 22.6167V30.8333H30.8333ZM11.4667 14.2667C12.2093 14.2667 12.9215 13.9717 13.4466 13.4466C13.9717 12.9215 14.2667 12.2093 14.2667 11.4667C14.2667 9.91667 13.0167 8.65 11.4667 8.65C10.7196 8.65 10.0032 8.94675 9.47498 9.47498C8.94675 10.0032 8.65 10.7196 8.65 11.4667C8.65 13.0167 9.91667 14.2667 11.4667 14.2667ZM13.7833 30.8333V16.8833H9.16667V30.8333H13.7833Z" fill="url(#paint0_linear_15_58)"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 40 40" fill="none">
+                <path d="M36.6667 19.9999C36.6667 10.7999 29.2 3.33325 20 3.33325C10.8 3.33325 3.33337 10.7999 3.33337 19.9999C3.33337 28.0666 9.06671 34.7833 16.6667 36.3332V24.9999H13.3334V19.9999H16.6667V15.8333C16.6667 12.6166 19.2834 9.99992 22.5 9.99992H26.6667V14.9999H23.3334C22.4167 14.9999 21.6667 15.7499 21.6667 16.6666V19.9999H26.6667V24.9999H21.6667V36.5833C30.0834 35.7499 36.6667 28.6499 36.6667 19.9999Z" fill="url(#paint0_linear_15_60)"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <form id="contactForm" class="flex flex-col gap-4 w-full max-w-md xl:max-w-[27.5rem]">
+          <label for="name" class="text-white mb-1">Name</label>
+          <input type="text" id="name" name="name" required aria-required="true" class="p-2 bg-white rounded-md text-black" />
+          <label for="email" class="text-white mb-1">Email</label>
+          <input type="email" id="email" name="email" required aria-required="true" class="p-2 bg-white rounded-md text-black" />
+          <label for="message" class="text-white mb-1">Message</label>
+          <textarea id="message" name="message" required aria-required="true" class="p-2 bg-white rounded-md text-black" rows="5"></textarea>
+          <input type="submit" value="Send Now" class="bg-gradient-to-r from-[#AA800F] to-[#EED259] text-black font-bold px-4 py-2 rounded-md mt-2 hover:from-[#EED259] hover:to-[#AA800F] transition-colors duration-300" />
+        </form>
+      </div>
+      <div class="pt-8 text-center text-xs text-[#EED259]/50 tracking-wide">© 2025 Build Bliss Construction • Structural Framing Specialists</div>
+    </div>
+  </footer>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>

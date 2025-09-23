@@ -1,0 +1,64 @@
+li, .logo {
+    transition: transform 0.3s ease-in-out;
+}
+
+li:hover, .logo:hover {
+    transform: scale(1.1);
+}
+button {
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: linear-gradient(to right, #f1dd82, #916e0f);
+}
+.background-hero{
+    background-image: url(Images/world.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* Remove hero background on small screens */
+@media (max-width: 640px) {
+    .background-hero { background-image: url(Images/world2.svg);
+    background-size: contain; }
+}
+/* Overlays default hidden */
+.description, .lists {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+/* Project overlay appears when hovering the containing project card */
+.project-card:hover .description {
+    opacity: 1;
+    border: 2px solid #EED259;
+}
+/* Service list layer appears only when hovering the whole service card */
+.service-card:hover .lists {
+    opacity: 1;
+    border: 2px solid #EED259;
+}
+
+/* Active (click) state for touch / small & medium screens */
+.project-card.active .description,
+.service-card.active .lists {
+    opacity: 1;
+    border: 2px solid #EED259;
+}
+.service-card{
+    cursor: pointer;
+}
+
+/* Mobile nav state helpers (progressive enhancement) */
+#mobileNav[aria-hidden="true"] { visibility: hidden; }
+#mobileNav[aria-hidden="false"] { visibility: visible; }
+
+/* Optional prefers-reduced-motion respect */
+@media (prefers-reduced-motion: reduce) {
+  #mobileNav, #mobileOverlay { transition: none !important; }
+}
+
+/* Smooth scrolling for in-page anchor links */
+html {
+    scroll-behavior: smooth;
+}

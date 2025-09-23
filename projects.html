@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Projects | Build Bliss Construction</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-black text-white font-[Cabin]">
+  <header>
+    <nav class="flex items-center justify-between px-[2.5rem] py-[0.5rem] lg:px-[2.5rem] md:px-8 px-6">
+      <div class="logo flex-shrink-0">
+        <a href="index.html" aria-label="Go to Home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="150" height="54" viewBox="0 0 150 54" fill="none">
+  <path d="M149.5 53.5L75 40.5L0 53.5L75 34.5L149.5 53.5ZM57 32.5H54.5V29.5H57V32.5ZM60.5 32.5H58V29.5H60.5V32.5ZM73 32.5H70.5V29.5H73V32.5ZM76.5 32.5H74V29.5H76.5V32.5ZM80 32.5H77.5V29.5H80V32.5ZM93 32.5H90.5V29.5H93V32.5ZM96.5 32.5H94V29.5H96.5V32.5ZM57 28.5H54.5V25.5H57V28.5ZM60.5 28.5H58V25.5H60.5V28.5ZM73 28.5H70.5V25.5H73V28.5ZM76.5 28.5H74V25.5H76.5V28.5ZM80 28.5H77.5V25.5H80V28.5ZM93 28.5H90.5V25.5H93V28.5ZM96.5 28.5H94V25.5H96.5V28.5ZM98 11.2031V7.5H102.5V13.3438L127 25L75.5 8L24.5 25L75.5 0.5L98 11.2031ZM57 24.5H54.5V21.5H57V24.5ZM60.5 24.5H58V21.5H60.5V24.5ZM73 24.5H70.5V21.5H73V24.5ZM76.5 24.5H74V21.5H76.5V24.5ZM80 24.5H77.5V21.5H80V24.5ZM93 24.5H90.5V21.5H93V24.5ZM96.5 24.5H94V21.5H96.5V24.5ZM74.3887 20.5H70.5C70.5 18.8333 71.0559 17.7224 72.167 16.6113L74.3887 20.5ZM74.9443 20.5L73.833 18.2773L72.7227 16.0557C73.0931 15.6854 74.0556 15.5 74.9443 15.5V20.5ZM75.5 15.5C76.3889 15.5 77.3523 15.6853 77.7227 16.0557L76.6113 18.2773L75.5 20.5V15.5ZM78.2773 16.6113C79.3885 17.7224 79.9443 18.8333 79.9443 20.5H76.0557L78.2773 16.6113Z" fill="url(#paint0_linear_40_301)"/>
+  <defs>
+    <linearGradient id="paint0_linear_40_301" x1="74.75" y1="34.5" x2="74.75" y2="53.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#AA800F"/>
+      <stop offset="1" stop-color="#EED259"/>
+    </linearGradient>
+  </defs>
+                </svg>
+        </a>
+      </div>
+      <button id="menuToggle" aria-expanded="false" aria-controls="mobileNav" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-[#EED259]/40 text-[#EED259] focus:outline-none focus:ring-2 focus:ring-[#EED259] focus:ring-offset-2 focus:ring-offset-black transition">
+        <span class="sr-only">Open main menu</span>
+        <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" /></svg>
+        <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 hidden"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+      <div class="hidden lg:block">
+        <ul class="flex justify-between items-center gap-[4rem]">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="font-bold text-[#EED259]"><a href="projects.html" aria-current="page">Projects</a></li>
+        </ul>
+      </div>
+      <div class="hidden lg:block">
+        <a href="index.html#contact" class="bg-gradient-to-r from-[#AA800F] to-[#EED259] text-black font-bold py-2 px-4 rounded block focus:outline-none focus:ring-2 focus:ring-[#EED259] focus:ring-offset-2 focus:ring-offset-black">CONTACT</a>
+      </div>
+    </nav>
+    <div id="mobileNavWrapper" class="lg:hidden">
+      <div id="mobileOverlay" class="fixed inset-0 bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+      <div id="mobileNav" class="fixed top-0 right-0 h-full w-72 max-w-[80%] bg-black border-l border-[#EED259]/30 translate-x-full transition-transform duration-300 ease-out flex flex-col gap-8 p-8 shadow-xl">
+        <div class="flex items-center justify-between">
+          <span class="text-[#EED259] font-bold text-xl">Menu</span>
+          <button id="closePanel" type="button" class="inline-flex items-center justify-center w-9 h-9 rounded-md border border-[#EED259]/40 text-[#EED259] focus:outline-none focus:ring-2 focus:ring-[#EED259] focus:ring-offset-2 focus:ring-offset-black transition" aria-label="Close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+          </button>
+        </div>
+        <ul class="flex flex-col gap-6 text-lg">
+          <li><a class="block" href="index.html">Home</a></li>
+          <li><a class="block" href="about.html">About</a></li>
+          <li class="font-bold text-[#EED259]"><a class="block" href="projects.html" aria-current="page">Projects</a></li>
+        </ul>
+        <div>
+          <a href="index.html#contact" class="w-full text-center bg-gradient-to-r from-[#AA800F] to-[#EED259] text-black font-bold py-3 px-4 rounded block focus:outline-none focus:ring-2 focus:ring-[#EED259] focus:ring-offset-2 focus:ring-offset-black">CONTACT</a>
+        </div>
+        <div class="mt-auto text-xs text-[#EED259]/60 tracking-wide">© 2025 Build Bliss Construction</div>
+      </div>
+    </div>
+  </header>
+  <main class="flex flex-col gap-24 px-6 md:px-12 lg:px-[5rem] py-[2rem]">
+    <section class="flex flex-col gap-6 items-center text-center mt-4">
+      <h1 class="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#AA800F] to-[#EED259]">Projects</h1>
+      <p class="max-w-3xl text-lg leading-relaxed text-white/80">A selection of current and recently completed structural framing projects highlighting multi-family efficiency, commercial adaptability, and precision execution.</p>
+    </section>
+
+    <section class="flex flex-col gap-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#EED259] text-center">Featured Builds</h2>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Card template repeated -->
+        <div class="relative project-card h-72 rounded-lg overflow-hidden transition-shadow duration-300 hover:shadow-lg hover:shadow-[#EED259]/30">
+          <img src="Images/project1.png" alt="Commercial Rental Building Kelowna" class="w-full h-full object-cover rounded-lg" loading="lazy" />
+          <div class="absolute inset-0 flex flex-col gap-2 justify-end p-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent description rounded-lg">
+            <h3 class="text-xl font-semibold text-[#EED259] leading-snug">Commercial Rental Building</h3>
+            <p class="text-white/80 text-sm">Kelowna, BC</p>
+            <p class="text-[11px] text-white/70 leading-relaxed">Multi-storey wood-frame project with phased material staging to reduce onsite congestion and maintain structural sequencing efficiency.</p>
+            <p class="text-[11px] text-[#EED259] uppercase tracking-wide">Scope: Structural Framing</p>
+          </div>
+        </div>
+        <div class="relative project-card h-72 rounded-lg overflow-hidden transition-shadow duration-300 hover:shadow-lg hover:shadow-[#EED259]/30">
+          <img src="Images/project2.png" alt="Multi-Family Development North Vancouver" class="w-full h-full object-cover rounded-lg" loading="lazy" />
+          <div class="absolute inset-0 flex flex-col gap-2 justify-end p-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent description rounded-lg">
+            <h3 class="text-xl font-semibold text-[#EED259] leading-snug">Multi-Family Development</h3>
+            <p class="text-white/80 text-sm">North Vancouver, BC</p>
+            <p class="text-[11px] text-white/70 leading-relaxed">Coordinated framing for a high-density site adjacent to active urban infrastructure—tight tolerances and efficient turnover for downstream trades.</p>
+            <p class="text-[11px] text-[#EED259] uppercase tracking-wide">Scope: Mid-Rise Framing</p>
+          </div>
+        </div>
+        <div class="project-card h-72 flex flex-col justify-center items-center rounded-lg bg-black/50 border-2 border-[#EED259] px-6 text-center gap-3 transition-shadow duration-300 hover:shadow-lg hover:shadow-[#EED259]/30">
+          <h3 class="text-xl font-semibold text-[#EED259]">Coming Soon</h3>
+          <p class="text-white/70 text-sm">Sicamous, BC</p>
+          <p class="text-[11px] text-white/60 max-w-xs">Lakeside structural package with challenging grade transitions requiring adaptive framing solutions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex flex-col gap-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#EED259] text-center">Process In Action</h2>
+      <div class="grid gap-10 md:grid-cols-3">
+        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-3">
+          <h3 class="text-lg font-semibold text-[#EED259]">1. Strategic Layout</h3>
+          <p class="text-white/70 text-sm leading-relaxed">Critical load paths, shear wall alignment, and plate calibration double-checked before volume framing begins.</p>
+        </div>
+        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-3">
+          <h3 class="text-lg font-semibold text-[#EED259]">2. Phased Progression</h3>
+          <p class="text-white/70 text-sm leading-relaxed">Crew segmentation enables simultaneous wall builds, stair cores, and engineered connection installation.</p>
+        </div>
+        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-3">
+          <h3 class="text-lg font-semibold text-[#EED259]">3. Turnover & Support</h3>
+          <p class="text-white/70 text-sm leading-relaxed">Clean structural handoff, punch corrections, and responsive follow-up keep schedules intact.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Removed 'Have A Project To Frame?' CTA section as requested -->
+  </main>
+  <footer id="contact" class="mt-10 border-t border-[#EED259]/20">
+    <div class="px-6 md:px-12 lg:px-[5rem] py-14 flex flex-col gap-10">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#EED259] text-center">Get In Touch</h2>
+      <div class="flex flex-col xl:flex-row gap-16 justify-between items-start">
+        <div class="flex-1 flex flex-col gap-5 max-w-md">
+          <h3 class="text-2xl font-semibold text-[#EED259]">Let’s Frame It Right</h3>
+          <p class="text-white/70 text-sm leading-relaxed">Whether you’re coordinating a multi-family site, scoping a commercial build, or planning a custom residence—we can integrate early, help sequence structural milestones, and deliver a clean, dependable frame. Reach out and we’ll respond promptly.</p>
+          <ul class="space-y-3 text-white/75 text-sm">
+            <li><span class="text-[#EED259] font-semibold">Office:</span> 7244 140ST Surrey, BC (V3W5J7)</li>
+            <li><span class="text-[#EED259] font-semibold">Email:</span> buildblissconstruction@gmail.com</li>
+            <li><span class="text-[#EED259] font-semibold">Availability:</span> Mon–Sat / 7:00am – 5:30pm</li>
+          </ul>
+          <div class="hidden md:flex flex-col gap-5 pt-4">
+            <div class="flex gap-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 40 40" fill="none">
+                <path d="M13 3.33325H27C32.3334 3.33325 36.6667 7.66659 36.6667 12.9999V26.9999C36.6667 29.5637 35.6483 32.0224 33.8354 33.8353C32.0226 35.6481 29.5638 36.6666 27 36.6666H13C7.66671 36.6666 3.33337 32.3333 3.33337 26.9999V12.9999C3.33337 10.4362 4.35182 7.9774 6.16468 6.16455C7.97753 4.3517 10.4363 3.33325 13 3.33325ZM12.6667 6.66659C11.0754 6.66659 9.54928 7.29873 8.42407 8.42394C7.29885 9.54916 6.66671 11.0753 6.66671 12.6666V27.3333C6.66671 30.6499 9.35004 33.3333 12.6667 33.3333H27.3334C28.9247 33.3333 30.4508 32.7011 31.576 31.5759C32.7012 30.4507 33.3334 28.9245 33.3334 27.3333V12.6666C33.3334 9.34992 30.65 6.66659 27.3334 6.66659H12.6667ZM28.75 9.16658C29.3026 9.16658 29.8325 9.38608 30.2232 9.77678C30.6139 10.1675 30.8334 10.6974 30.8334 11.2499C30.8334 11.8025 30.6139 12.3324 30.2232 12.7231C29.8325 13.1138 29.3026 13.3333 28.75 13.3333C28.1975 13.3333 27.6676 13.1138 27.2769 12.7231C26.8862 12.3324 26.6667 11.8025 26.6667 11.2499C26.6667 10.6974 26.8862 10.1675 27.2769 9.77678C27.6676 9.38608 28.1975 9.16658 28.75 9.16658ZM20 11.6666C22.2102 11.6666 24.3298 12.5446 25.8926 14.1074C27.4554 15.6702 28.3334 17.7898 28.3334 19.9999C28.3334 22.2101 27.4554 24.3297 25.8926 25.8925C24.3298 27.4553 22.2102 28.3333 20 28.3333C17.7899 28.3333 15.6703 27.4553 14.1075 25.8925C12.5447 24.3297 11.6667 22.2101 11.6667 19.9999C11.6667 17.7898 12.5447 15.6702 14.1075 14.1074C15.6703 12.5446 17.7899 11.6666 20 11.6666ZM20 14.9999C18.674 14.9999 17.4022 15.5267 16.4645 16.4644C15.5268 17.4021 15 18.6738 15 19.9999C15 21.326 15.5268 22.5978 16.4645 23.5355C17.4022 24.4731 18.674 24.9999 20 24.9999C21.3261 24.9999 22.5979 24.4731 23.5356 23.5355C24.4733 22.5978 25 21.326 25 19.9999C25 18.6738 24.4733 17.4021 23.5356 16.4644C22.5979 15.5267 21.3261 14.9999 20 14.9999Z" fill="url(#paint0_linear_15_54)"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 40 40" fill="none">
+                <path d="M27.6667 9.7C26.5277 8.39921 25.8998 6.729 25.9 5H20.75V25.6667C20.7111 26.7853 20.2392 27.8451 19.4339 28.6225C18.6285 29.3999 17.5527 29.834 16.4333 29.8333C14.0667 29.8333 12.1 27.9 12.1 25.5C12.1 22.6333 14.8667 20.4833 17.7167 21.3667V16.1C11.9667 15.3333 6.93335 19.8 6.93335 25.5C6.93335 31.05 11.5334 35 16.4167 35C21.65 35 25.9 30.75 25.9 25.5V15.0167C27.9883 16.5164 30.4956 17.3211 33.0667 17.3167V12.1667C33.0667 12.1667 29.9333 12.3167 27.6667 9.7Z" fill="url(#paint0_linear_15_56)"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 40 40" fill="none">
+                <path d="M31.6667 5C32.5507 5 33.3986 5.35119 34.0237 5.97631C34.6488 6.60143 35 7.44928 35 8.33333V31.6667C35 32.5507 34.6488 33.3986 34.0237 34.0237C33.3986 34.6488 32.5507 35 31.6667 35H8.33333C7.44928 35 6.60143 34.6488 5.97631 34.0237C5.35119 33.3986 5 32.5507 5 31.6667V8.33333C5 7.44928 5.35119 6.60143 5.97631 5.97631C6.60143 5.35119 7.44928 5 8.33333 5H31.6667ZM30.8333 30.8333V22C30.8333 20.559 30.2609 19.177 29.2419 18.1581C28.223 17.1391 26.841 16.5667 25.4 16.5667C23.9833 16.5667 22.3333 17.4333 21.5333 18.7333V16.8833H16.8833V30.8333H21.5333V22.6167C21.5333 21.3333 22.5667 20.2833 23.85 20.2833C24.4688 20.2833 25.0623 20.5292 25.4999 20.9668C25.9375 21.4043 26.1833 21.9978 26.1833 22.6167V30.8333H30.8333ZM11.4667 14.2667C12.2093 14.2667 12.9215 13.9717 13.4466 13.4466C13.9717 12.9215 14.2667 12.2093 14.2667 11.4667C14.2667 9.91667 13.0167 8.65 11.4667 8.65C10.7196 8.65 10.0032 8.94675 9.47498 9.47498C8.94675 10.0032 8.65 10.7196 8.65 11.4667C8.65 13.0167 9.91667 14.2667 11.4667 14.2667ZM13.7833 30.8333V16.8833H9.16667V30.8333H13.7833Z" fill="url(#paint0_linear_15_58)"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 40 40" fill="none">
+                <path d="M36.6667 19.9999C36.6667 10.7999 29.2 3.33325 20 3.33325C10.8 3.33325 3.33337 10.7999 3.33337 19.9999C3.33337 28.0666 9.06671 34.7833 16.6667 36.3332V24.9999H13.3334V19.9999H16.6667V15.8333C16.6667 12.6166 19.2834 9.99992 22.5 9.99992H26.6667V14.9999H23.3334C22.4167 14.9999 21.6667 15.7499 21.6667 16.6666V19.9999H26.6667V24.9999H21.6667V36.5833C30.0834 35.7499 36.6667 28.6499 36.6667 19.9999Z" fill="url(#paint0_linear_15_60)"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <form id="contactForm" class="flex flex-col gap-4 w-full max-w-md xl:max-w-[27.5rem]">
+          <label for="name" class="text-white mb-1">Name</label>
+          <input type="text" id="name" name="name" required aria-required="true" class="p-2 bg-white rounded-md text-black" />
+          <label for="email" class="text-white mb-1">Email</label>
+          <input type="email" id="email" name="email" required aria-required="true" class="p-2 bg-white rounded-md text-black" />
+          <label for="message" class="text-white mb-1">Message</label>
+          <textarea id="message" name="message" required aria-required="true" class="p-2 bg-white rounded-md text-black" rows="5"></textarea>
+          <input type="submit" value="Send Now" class="bg-gradient-to-r from-[#AA800F] to-[#EED259] text-black font-bold px-4 py-2 rounded-md mt-2 hover:from-[#EED259] hover:to-[#AA800F] transition-colors duration-300" />
+        </form>
+      </div>
+      <div class="pt-8 text-center text-xs text-[#EED259]/50 tracking-wide">© 2025 Build Bliss Construction • Structural Framing Specialists</div>
+    </div>
+  </footer>
+</body>
+</html>
