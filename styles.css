@@ -11,7 +11,16 @@ button {
 
 button:hover {
     transform: scale(1.1);
-    background-color: linear-gradient(to right, #f1dd82, #916e0f);
+    background: linear-gradient(to right, #f1dd82, #916e0f);
+}
+/* Reusable gradient button enhancement for anchors, buttons, inputs */
+.btn-gradient {
+    display: inline-block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    will-change: transform;
+}
+.btn-gradient:hover, .btn-gradient:focus-visible {
+    transform: scale(1.06);
 }
 .background-hero{
     background-image: url(Images/world.svg);
