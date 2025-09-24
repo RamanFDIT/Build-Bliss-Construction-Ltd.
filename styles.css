@@ -62,3 +62,37 @@ button:hover {
 html {
     scroll-behavior: smooth;
 }
+
+/* --------------------------- Reveal Animations --------------------------- */
+/* Base hidden state */
+/* Hide only when JS is enabled (html.js) so no-JS users still see content */
+.js [data-reveal] {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(.25,.8,.25,1);
+    will-change: opacity, transform;
+}
+
+/* Direction variants */
+.js [data-reveal="left"] { transform: translateX(-40px); }
+.js [data-reveal="right"] { transform: translateX(40px); }
+.js [data-reveal="up"] { transform: translateY(40px); }
+.js [data-reveal="down"] { transform: translateY(-40px); }
+
+/* Visible state */
+.reveal-visible {
+    opacity: 1 !important;
+    transform: translate3d(0,0,0) !important;
+}
+
+/* Optional stagger via data attribute */
+[data-reveal][data-delay] { transition-delay: var(--reveal-delay, 0s); }
+
+/* Reduced motion: show immediately */
+@media (prefers-reduced-motion: reduce) {
+        .js [data-reveal] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}

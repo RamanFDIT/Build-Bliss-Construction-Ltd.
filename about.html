@@ -8,12 +8,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add('js');</script>
   <script src="script.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-black text-white font-[Cabin]">
   <header>
-    <nav class="flex items-center justify-between px-[2.5rem] py-[0.5rem] lg:px-[2.5rem] md:px-8 px-6">
+  <nav class="flex items-center justify-between px-[2.5rem] py-[0.5rem] lg:px-[2.5rem] md:px-8 px-6 bg-black/95 backdrop-blur-sm fixed top-0 left-0 right-0 border-b border-[#EED259]/10">
       <div class="logo flex-shrink-0">
         <a href="index.html" aria-label="Go to Home">
           <svg class="w-32 h-auto sm:w-36 md:w-40 lg:w-[150px]" xmlns="http://www.w3.org/2000/svg" width="150" height="54" viewBox="0 0 150 54" fill="none">
@@ -45,8 +46,8 @@
     </nav>
     <!-- Mobile Nav -->
     <div id="mobileNavWrapper" class="lg:hidden">
-      <div id="mobileOverlay" class="fixed inset-0 bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300"></div>
-      <div id="mobileNav" class="fixed top-0 right-0 h-full w-72 max-w-[80%] bg-black border-l border-[#EED259]/30 translate-x-full transition-transform duration-300 ease-out flex flex-col gap-8 p-8 shadow-xl">
+      <div id="mobileOverlay" class="fixed inset-0 bg-black/80 opacity-0 pointer-events-none transition-opacity duration-300 z-40"></div>
+      <div id="mobileNav" class="fixed top-0 right-0 h-full w-72 max-w-[80%] bg-black/95 backdrop-blur-sm border-l border-[#EED259]/30 translate-x-full transition-transform duration-300 ease-out flex flex-col gap-8 p-8 shadow-xl z-50">
         <div class="flex items-center justify-between">
           <span class="text-[#EED259] font-bold text-xl">Menu</span>
           <button id="closePanel" type="button" class="inline-flex items-center justify-center w-9 h-9 rounded-md border border-[#EED259]/40 text-[#EED259] focus:outline-none focus:ring-2 focus:ring-[#EED259] focus:ring-offset-2 focus:ring-offset-black transition" aria-label="Close menu">
@@ -65,23 +66,23 @@
       </div>
     </div>
   </header>
-  <main class="flex flex-col gap-24 px-6 md:px-12 lg:px-[5rem] py-[2rem]">
+  <main class="flex flex-col gap-24 px-6 md:px-12 lg:px-[5rem] py-[2rem] pt-24 md:pt-28">
     <!-- Hero / Intro -->
-    <section class="flex flex-col gap-8 items-center text-center mt-4">
-      <h1 class="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#AA800F] to-[#EED259]">About Us</h1>
-      <p class="max-w-3xl text-lg leading-relaxed text-white/80">We frame spaces that become legacies. Our commitment goes beyond lumber and fasteners—we engineer dependable structures, streamline schedules, and protect the trust our clients place in us.</p>
+  <section class="flex flex-col gap-8 items-center text-center" data-reveal>
+      <h1 class="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#AA800F] to-[#EED259]" data-reveal data-delay="100">About Us</h1>
+      <p class="max-w-3xl text-lg leading-relaxed text-white/80" data-reveal data-delay="150">We frame spaces that become legacies. Our commitment goes beyond lumber and fasteners—we engineer dependable structures, streamline schedules, and protect the trust our clients place in us.</p>
     </section>
 
     <!-- Story -->
-    <section class="flex flex-col gap-10">
-      <h2 class="text-3xl md:text-4xl font-bold text-[#EED259] text-center">Our Story</h2>
-      <div class="flex flex-col lg:flex-row gap-12 items-start lg:items-stretch">
-        <div class="flex-1 flex flex-col gap-6">
+    <section class="flex flex-col gap-10" data-reveal>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#EED259] text-center" data-reveal data-delay="100">Our Story</h2>
+      <div class="flex flex-col lg:flex-row gap-12 items-start lg:items-stretch" data-reveal data-delay="150">
+        <div class="flex-1 flex flex-col gap-6" data-reveal="left" data-delay="200">
           <p class="text-white/80 leading-relaxed">Founded by field-tested supervisors who saw the gap between <span class="text-[#EED259] font-semibold">speed</span> and <span class="text-[#EED259] font-semibold">craftsmanship</span>, Build Bliss Construction was created to prove you can have both. What started as a small, disciplined framing crew has grown into a collaborative unit supporting multi-family, custom residential, and commercial projects across the Lower Mainland and Interior.</p>
           <p class="text-white/80 leading-relaxed">Every project we touch is guided by a simple principle: <em>deliver structural excellence with zero drama.</em> That means proactive communication, precise layout, clean sites, and crews that show up prepared—every single day.</p>
           <p class="text-white/80 leading-relaxed">We invest heavily in training, tooling, and workflow optimization. Laser layout, safety-first sequencing, and transparent reporting help GCs and owners keep confidence high while schedules stay protected.</p>
         </div>
-        <div class="flex-1 flex flex-col gap-8 bg-black/50 rounded-lg p-8 border border-[#EED259]/30">
+  <div class="flex-1 flex flex-col gap-8 bg-black/50 rounded-lg p-8 border border-[#EED259]/30" data-reveal="right" data-delay="250">
           <h3 class="text-2xl font-bold text-[#EED259]">Quick Facts</h3>
           <ul class="space-y-4 text-white/80">
             <li><span class="text-[#EED259] font-semibold">10+</span> dedicated framing professionals</li>
@@ -95,30 +96,30 @@
     </section>
 
     <!-- Values -->
-    <section class="flex flex-col gap-10">
-      <h2 class="text-3xl md:text-4xl font-bold text-[#EED259] text-center">Core Values</h2>
-      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-4">
+    <section class="flex flex-col gap-10" data-reveal>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#EED259] text-center" data-reveal data-delay="100">Core Values</h2>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3" data-reveal data-delay="150">
+        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-4" data-reveal="up" data-delay="200">
           <h3 class="text-xl font-semibold text-[#EED259]">Precision First</h3>
           <p class="text-white/70 text-sm">Accurate layout and fastening today prevents cost escalations tomorrow. We slow down early so the whole project can accelerate later.</p>
         </div>
-        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-4">
+  <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-4" data-reveal="up" data-delay="250">
           <h3 class="text-xl font-semibold text-[#EED259]">Reliable Cadence</h3>
           <p class="text-white/70 text-sm">Consistent progress beats sporadic bursts. Our crews maintain disciplined daily output so other trades can plan confidently.</p>
         </div>
-        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-4">
+  <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-4" data-reveal="up" data-delay="300">
           <h3 class="text-xl font-semibold text-[#EED259]">Transparent Communication</h3>
           <p class="text-white/70 text-sm">We surface risks early, document decisions, and keep GCs informed—never guessing what’s happening on site.</p>
         </div>
-        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-4">
+  <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-4" data-reveal="up" data-delay="350">
           <h3 class="text-xl font-semibold text-[#EED259]">Safety As Habit</h3>
           <p class="text-white/70 text-sm">Safe sites are efficient sites. Gear compliance, housekeeping, and hazard anticipation are baked into our rhythm.</p>
         </div>
-        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-4">
+  <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-4" data-reveal="up" data-delay="400">
           <h3 class="text-xl font-semibold text-[#EED259]">Craft With Pride</h3>
           <p class="text-white/70 text-sm">We build as if the structure will carry our name forever—because reputation compounds over time.</p>
         </div>
-        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-4">
+  <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-4" data-reveal="up" data-delay="450">
           <h3 class="text-xl font-semibold text-[#EED259]">Partnership Mindset</h3>
           <p class="text-white/70 text-sm">We’re not just a labour input—we’re a structural partner helping the entire build succeed.</p>
         </div>
@@ -126,18 +127,18 @@
     </section>
 
     <!-- Process -->
-    <section class="flex flex-col gap-10">
-      <h2 class="text-3xl md:text-4xl font-bold text-[#EED259] text-center">How We Work</h2>
-      <div class="grid gap-10 md:grid-cols-3">
-        <div class="flex flex-col gap-4">
+    <section class="flex flex-col gap-10" data-reveal>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#EED259] text-center" data-reveal data-delay="100">How We Work</h2>
+      <div class="grid gap-10 md:grid-cols-3" data-reveal data-delay="150">
+        <div class="flex flex-col gap-4" data-reveal="up" data-delay="200">
           <span class="text-[#EED259] font-bold tracking-wide">01 / PREP & MOBILIZE</span>
           <p class="text-white/70 text-sm leading-relaxed">Scope review, sequencing strategy, material readiness checks, safety & logistic alignment. We arrive ready—not reactive.</p>
         </div>
-        <div class="flex flex-col gap-4">
+  <div class="flex flex-col gap-4" data-reveal="up" data-delay="250">
           <span class="text-[#EED259] font-bold tracking-wide">02 / STRUCTURAL EXECUTION</span>
           <p class="text-white/70 text-sm leading-relaxed">Laser layout, framing progression, engineered connections, daily cleanup, photo & milestone documentation.</p>
         </div>
-        <div class="flex flex-col gap-4">
+  <div class="flex flex-col gap-4" data-reveal="up" data-delay="300">
           <span class="text-[#EED259] font-bold tracking-wide">03 / TURNOVER & SUPPORT</span>
           <p class="text-white/70 text-sm leading-relaxed">Punch review, corrective adjustments, handoff notes, and responsive follow-up for downstream trades.</p>
         </div>

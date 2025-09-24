@@ -8,12 +8,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add('js');</script>
   <script src="script.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-black text-white font-[Cabin]">
   <header>
-    <nav class="flex items-center justify-between px-[2.5rem] py-[0.5rem] lg:px-[2.5rem] md:px-8 px-6">
+  <nav class="flex items-center justify-between px-[2.5rem] py-[0.5rem] lg:px-[2.5rem] md:px-8 px-6 bg-black/95 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-[#EED259]/10">
       <div class="logo flex-shrink-0">
         <a href="index.html" aria-label="Go to Home">
                 <svg class="w-32 h-auto sm:w-36 md:w-40 lg:w-[150px]" xmlns="http://www.w3.org/2000/svg" width="150" height="54" viewBox="0 0 150 54" fill="none">
@@ -44,8 +45,8 @@
       </div>
     </nav>
     <div id="mobileNavWrapper" class="lg:hidden">
-      <div id="mobileOverlay" class="fixed inset-0 bg-black/60 opacity-0 pointer-events-none transition-opacity duration-300"></div>
-      <div id="mobileNav" class="fixed top-0 right-0 h-full w-72 max-w-[80%] bg-black border-l border-[#EED259]/30 translate-x-full transition-transform duration-300 ease-out flex flex-col gap-8 p-8 shadow-xl">
+      <div id="mobileOverlay" class="fixed inset-0 bg-black/80 opacity-0 pointer-events-none transition-opacity duration-300 z-40"></div>
+      <div id="mobileNav" class="fixed top-0 right-0 h-full w-72 max-w-[80%] bg-black/95 backdrop-blur-sm border-l border-[#EED259]/30 translate-x-full transition-transform duration-300 ease-out flex flex-col gap-8 p-8 shadow-xl z-50">
         <div class="flex items-center justify-between">
           <span class="text-[#EED259] font-bold text-xl">Menu</span>
           <button id="closePanel" type="button" class="inline-flex items-center justify-center w-9 h-9 rounded-md border border-[#EED259]/40 text-[#EED259] focus:outline-none focus:ring-2 focus:ring-[#EED259] focus:ring-offset-2 focus:ring-offset-black transition" aria-label="Close menu">
@@ -64,17 +65,17 @@
       </div>
     </div>
   </header>
-  <main class="flex flex-col gap-24 px-6 md:px-12 lg:px-[5rem] py-[2rem]">
-    <section class="flex flex-col gap-6 items-center text-center mt-4">
-      <h1 class="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#AA800F] to-[#EED259]">Projects</h1>
-      <p class="max-w-3xl text-lg leading-relaxed text-white/80">A selection of current and recently completed structural framing projects highlighting multi-family efficiency, commercial adaptability, and precision execution.</p>
+  <main class="flex flex-col gap-24 px-6 md:px-12 lg:px-[5rem] py-[2rem] pt-24 md:pt-28">
+  <section class="flex flex-col gap-6 items-center text-center" data-reveal>
+      <h1 class="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#AA800F] to-[#EED259]" data-reveal data-delay="100">Projects</h1>
+      <p class="max-w-3xl text-lg leading-relaxed text-white/80" data-reveal data-delay="150">A selection of current and recently completed structural framing projects highlighting multi-family efficiency, commercial adaptability, and precision execution.</p>
     </section>
 
-    <section class="flex flex-col gap-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-[#EED259] text-center">Featured Builds</h2>
-      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <section class="flex flex-col gap-12" data-reveal>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#EED259] text-center" data-reveal data-delay="100">Featured Builds</h2>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3" data-reveal data-delay="150">
         <!-- Card template repeated -->
-        <div class="relative project-card h-72 rounded-lg overflow-hidden transition-shadow duration-300 hover:shadow-lg hover:shadow-[#EED259]/30">
+  <div class="relative project-card h-72 rounded-lg overflow-hidden transition-shadow duration-300 hover:shadow-lg hover:shadow-[#EED259]/30" data-reveal="up" data-delay="200">
           <img src="Images/project1.png" alt="Commercial Rental Building Kelowna" class="w-full h-full object-cover rounded-lg" loading="lazy" />
           <div class="absolute inset-0 flex flex-col gap-2 justify-end p-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent description rounded-lg">
             <h3 class="text-xl font-semibold text-[#EED259] leading-snug">Commercial Rental Building</h3>
@@ -83,7 +84,7 @@
             <p class="text-[11px] text-[#EED259] uppercase tracking-wide">Scope: Structural Framing</p>
           </div>
         </div>
-        <div class="relative project-card h-72 rounded-lg overflow-hidden transition-shadow duration-300 hover:shadow-lg hover:shadow-[#EED259]/30">
+  <div class="relative project-card h-72 rounded-lg overflow-hidden transition-shadow duration-300 hover:shadow-lg hover:shadow-[#EED259]/30" data-reveal="up" data-delay="250">
           <img src="Images/project2.png" alt="Multi-Family Development North Vancouver" class="w-full h-full object-cover rounded-lg" loading="lazy" />
           <div class="absolute inset-0 flex flex-col gap-2 justify-end p-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent description rounded-lg">
             <h3 class="text-xl font-semibold text-[#EED259] leading-snug">Multi-Family Development</h3>
@@ -92,7 +93,7 @@
             <p class="text-[11px] text-[#EED259] uppercase tracking-wide">Scope: Mid-Rise Framing</p>
           </div>
         </div>
-        <div class="project-card h-72 flex flex-col justify-center items-center rounded-lg bg-black/50 border-2 border-[#EED259] px-6 text-center gap-3 transition-shadow duration-300 hover:shadow-lg hover:shadow-[#EED259]/30">
+  <div class="project-card h-72 flex flex-col justify-center items-center rounded-lg bg-black/50 border-2 border-[#EED259] px-6 text-center gap-3 transition-shadow duration-300 hover:shadow-lg hover:shadow-[#EED259]/30" data-reveal="up" data-delay="300">
           <h3 class="text-xl font-semibold text-[#EED259]">Coming Soon</h3>
           <p class="text-white/70 text-sm">Sicamous, BC</p>
           <p class="text-[11px] text-white/60 max-w-xs">Lakeside structural package with challenging grade transitions requiring adaptive framing solutions.</p>
@@ -100,18 +101,18 @@
       </div>
     </section>
 
-    <section class="flex flex-col gap-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-[#EED259] text-center">Process In Action</h2>
-      <div class="grid gap-10 md:grid-cols-3">
-        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-3">
+    <section class="flex flex-col gap-12" data-reveal>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#EED259] text-center" data-reveal data-delay="100">Process In Action</h2>
+      <div class="grid gap-10 md:grid-cols-3" data-reveal data-delay="150">
+        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-3" data-reveal="up" data-delay="200">
           <h3 class="text-lg font-semibold text-[#EED259]">1. Strategic Layout</h3>
           <p class="text-white/70 text-sm leading-relaxed">Critical load paths, shear wall alignment, and plate calibration double-checked before volume framing begins.</p>
         </div>
-        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-3">
+  <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-3" data-reveal="up" data-delay="250">
           <h3 class="text-lg font-semibold text-[#EED259]">2. Phased Progression</h3>
           <p class="text-white/70 text-sm leading-relaxed">Crew segmentation enables simultaneous wall builds, stair cores, and engineered connection installation.</p>
         </div>
-        <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-3">
+  <div class="p-6 rounded-lg bg-black/50 border border-[#EED259]/20 flex flex-col gap-3" data-reveal="up" data-delay="300">
           <h3 class="text-lg font-semibold text-[#EED259]">3. Turnover & Support</h3>
           <p class="text-white/70 text-sm leading-relaxed">Clean structural handoff, punch corrections, and responsive follow-up keep schedules intact.</p>
         </div>
