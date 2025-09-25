@@ -27,7 +27,7 @@ button:hover {
     background-size: cover;
     background-repeat: no-repeat;
 }
-/* Remove hero background on small screens */
+/* Changing hero background on small screens */
 @media (max-width: 640px) {
     .background-hero { background-image: url(Images/world2.svg);
     background-size: contain; }
