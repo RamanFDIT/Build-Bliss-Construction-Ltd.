@@ -170,7 +170,7 @@
         const name = (this.querySelector('#name')?.value || '').trim();
         const email = (this.querySelector('#email')?.value || '').trim();
         const message = (this.querySelector('#message')?.value || '').trim();
-        const recipient = 'buildblissconstruction@gmail.com'; // change to your Gmail if different
+        const recipient = 'buildblissconstructionltd@gmail.com'; // change to your Gmail if different
         const subject = encodeURIComponent(`Website Inquiry from ${name || 'Visitor'}`);
         const bodyLines = [
           `Name: ${name}`,
